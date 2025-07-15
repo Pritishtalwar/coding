@@ -1,0 +1,83 @@
+/* General reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fff5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: #e23744; /* Zomato red */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+}
+
+header div {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+header a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: #ffb3b3;
+}
+
+/* Main content styling */
+main {
+    padding: 40px 30px;
+    background-color: #fff;
+}
+
+main > div {
+    font-size: 2rem;
+    color: #e23744;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Footer styling */
+footer {
+    background-color: #e23744;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffb3b3;
+}
