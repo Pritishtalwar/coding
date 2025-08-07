@@ -11,12 +11,22 @@
     <button onclick="playGame('rock');">Rock</button>    
     <button  onclick="playGame('paper');">Paper</button>
     <button onclick="playGame('scissors');">Scissors</button>
-    <button onclick="playGame('reset');">Reset</button>
-    <button onclick="playGame('showscore');">Showscore</button>
+    <button onclick="
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        localStorage.removeItem('score');
+        ">Reset Score </button>
+    <button onclick="playGame('showscore')">ShowScore</button>
 
     <script>
-        const score = JSON.parse(localStorage.getItem('score'));
-        function playGame(playerMove) {
+        const score = JSON.parse(localStorage.getItem('score')) || {
+            wins: 0,
+            losses: 0,
+            ties: 0
+        }
+        
+        function playGame(playerMove) { 
             const computerMove = pickComputerMove(); 
         
         let result = ' ';
@@ -50,10 +60,6 @@
             else if (computerMove === 'scissors'){
                 result = 'You win';
             }
-        } else if(playerMove === 'reset') {
-            score.wins = 0;
-            score.losses = 0;
-            score.ties = 0;
         }
         if (result === 'You win') {
             score.wins++;
@@ -62,7 +68,9 @@
         } else if (result === 'Tie') {
             score.ties++;
         }
-        localStorage.getItem('score', JSON.stringify(score));
+
+        localStorage.setItem('score', JSON.stringify(score));
+
         alert(`You picked ${playerMove} and the computer picked ${computerMove}. Result: ${result}\nWins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
         }
 
