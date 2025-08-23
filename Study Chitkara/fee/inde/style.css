@@ -1,0 +1,154 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #f1f1f1;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+/* Navigation */
+.nav {
+  background: #1a1a1a;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00bcd4;
+}
+
+.nav nav a {
+  margin-left: 2rem;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav nav a:hover {
+  color: #00bcd4;
+}
+
+/* HERO */
+#hero {
+  background: linear-gradient(to bottom right, #000000, #222222);
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text h1 span {
+  color: #00bcd4;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #aaa;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00bcd4;
+}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #000;
+  transition: transform 0.3s;
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+.project-card p {
+  color: #ccc;
+  padding: 0 1rem 1.5rem;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Contact */
+#contact p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.socials {
+  margin-top: 1rem;
+}
+
+.socials a {
+  margin: 0 1rem;
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #1a1a1a;
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pritish's Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0d0d0d;
+      color: #ffffff;
+    }
+    nav {
+      background-color: #1a1a1a;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #ffffff;
+      margin: 0 1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #00f2ff;
+    }
+    .section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .home img {
+      width: 300px;
+      border-radius: 15px;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 20px #00f2ff55;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      width: 100%;
+      max-width: 1000px;
+    }
+    .project {
+      background: #1a1a1a;
+      padding: 1rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .project:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #00f2ff66;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      color: white;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      background-color: #00f2ff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      cursor: pointer;
+      color: black;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div><strong>Pritish</strong></div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section id="home" class="section home">
+    <img src="https://via.placeholder.com/300x300.png?text=My+Photo" alt="Profile Picture" />
+    <h1>Welcome to My Portfolio</h1>
+    <p>Hello, I'm <strong>Pritish Twar</strong>, a creative developer & tech enthusiast.</p>
+  </section>
+
+  <section id="about" class="section about">
+    <h2>About Me</h2>
+    <p>I am a 2nd year BE CSE student at Chitkara University. Passionate about software development, web technologies, and problem-solving. I love building cool digital stuff and learning new skills every day.</p>
+  </section>
+
+  <section id="projects" class="section projects">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
+      <div class="project">
+        <h3>Weather App</h3>
+        <p>A web app that shows weather of any city using OpenWeather API.</p>
+      </div>
+      <div class="project">
+        <h3>To-Do List</h3>
+        <p>Simple task manager with local storage for saving your todos.</p>
+      </div>
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>This portfolio you're seeing right now – clean, dark, and responsive!</p>
+      </div>
+      <div class="project">
+        <h3>Calculator</h3>
+        <p>Basic calculator using HTML, CSS and JavaScript with animations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</body>
+</html>

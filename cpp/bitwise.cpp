@@ -16,6 +16,7 @@ int main(){
     // cout << x;
 
     // Data type Modifiers
+    // cout<< ~0;
     
     return 0;
 }
